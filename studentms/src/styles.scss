@@ -1,0 +1,166 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+:root {
+    --light: #f1f3f4;
+    --dark: #212121;
+
+    --black: #0c0c0c;
+    --white: #ffffff;
+
+    --dark-blue: #002756;
+    --light-blue: #035b7a;
+    --red: #8a3b3f;
+    --green: #00633B;
+
+    --bg-light: #eaeaea;
+}
+
+body {
+    background-color: var(--bg-light);
+}
+
+/* .container {
+    align-content: center;
+} */
+
+.btn-actions {
+    margin: 1rem 0rem;
+    display: block;
+    text-align: start;
+}
+
+.btn {
+    width: 65px;
+    padding: 3px 3px 3px 0px;
+    margin: 5px 5px 5px 0px;
+
+    background: var(--light-blue);
+    border: 2px solid var(--light-blue);
+
+    text-align: center;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--light-blue);
+    border: 2px solid var(--light-blue);
+}
+
+h1 {
+    color: var(--light-blue);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+h2,
+h3,
+h4 {
+    font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-align: center;
+}
+
+h2,
+h3,
+h4,
+p,
+a,
+label,
+input,
+th,
+td {
+    color: var(--dark);
+}
+
+label {
+    word-break: break-word;
+    white-space: normal;
+}
+
+.card {
+    margin: 0px 50px;
+}
+
+.card-header {
+    background-color: var(--pink);
+}
+
+.card-header h4 {
+    color: var(--light);
+}
+
+.card-body {
+    margin: 10px;
+}
+
+.flex-container {
+    margin: 5px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.danger-btn {
+    background-color: var(--red);
+    background: var(--red);
+    border: 2px solid var(--red);
+}
+
+.danger-btn:hover {
+    background-color: transparent;
+    color: var(--red);
+    border: 2px solid var(--red);
+}
+
+.safe-btn {
+    background-color: var(--green);
+    background: var(--green);
+    border: 2px solid var(--green);
+}
+
+.safe-btn:hover {
+    background-color: transparent;
+    color: var(--green);
+    border: 2px solid var(--green);
+}
+
+
+input {
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .btn {
+        padding: 1px 1px 1px 0px;
+        margin: 2px 2px 2px 0px;
+        width: 65px;
+    }
+
+    .card {
+        margin: 5px;
+    }
+
+    .card-body {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .container-fluid {
+        padding: 0px;
+    }
+
+    .mobile-hide {
+        display: none !important;
+    }
+}

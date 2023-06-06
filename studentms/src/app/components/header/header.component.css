@@ -1,0 +1,22 @@
+.head-container{
+    background-color:var(--light-blue);
+    text-align: center;
+    padding:10PX;
+}
+
+span{
+    color:var(--light);
+    font-weight: bold;
+    font-size: 2rem;
+    align-self: center;
+}
+
+.mobile-show {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .mobile-show {
+        display: inline;
+    }
+}

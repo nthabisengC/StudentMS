@@ -1,0 +1,67 @@
+<app-back-button></app-back-button>
+
+<div class="container">
+    <h1>Edit Student</h1>
+    <div class="card shadow">
+        <div class="card-header py-3">
+            <h4 class="m-0">Student Information</h4>
+        </div>
+        <div class="card-body">
+            <form class="row g-3" [formGroup]="createForm">
+
+                <div class="col-md-6">
+                  <label for="firstName" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="firstName" 
+                  [(ngModel)] = "student.firstName" name="firstName" formControlName="firstName">
+                  <span class="text-danger"
+                  *ngIf="(createFormControl.firstName.touched || submitted) && createFormControl.firstName.hasError('required')">
+                  First Name is required
+                  </span>
+
+                </div>
+                <div class="col-md-6">
+                  <label for="lastName" class="form-label">Last Name</label>
+                  <input type="text" class="form-control" id="lastName"
+                  [(ngModel)] = "student.lastName" name="lastName" formControlName="lastName">
+                  <span class="text-danger"
+                  *ngIf="(createFormControl.lastName.touched || submitted) && createFormControl.lastName.hasError('required')">
+                  Last Name is required
+                  </span>
+                </div>
+              
+                <div class="col-md-6">
+                  <label for="contactNum" class="form-label">Contact Number</label>
+                  <input type="tel" class="form-control" id="contactNo"
+                  [(ngModel)] = "student.contactNo" name = "contactNo" formControlName="contactNo">
+                  <span class="text-danger"
+                  *ngIf="(createFormControl.contactNo.touched || submitted) && createFormControl.contactNo.hasError('required')">
+                  Contact Number is required
+                  </span>
+                  <span class="text-danger"
+                  *ngIf="(createFormControl.contactNo.touched || submitted) && createFormControl.contactNo.hasError('pattern')">
+                  Contact Number requires 10 digits
+                  </span>
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email"
+                  [(ngModel)] = "student.email" name = "email" formControlName="email">
+                  <span class="text-danger"
+                  *ngIf="(createFormControl.email.touched || submitted) && createFormControl.email.hasError('required')">
+                  Email is required
+                  </span>
+                  <span class="text-danger"
+                  *ngIf="(createFormControl.email.touched || submitted) && createFormControl.email.hasError('email')">
+                  a correct email format is required
+                  </span>
+                </div>
+  
+              </form>
+
+            <div class="btn-actions">
+              <button class="btn btn-primary" type="button" (click)="update()" >Submit</button>
+                <app-cancel-button></app-cancel-button>
+            </div>
+        </div>
+    </div>
+</div>

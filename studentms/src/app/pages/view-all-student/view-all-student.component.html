@@ -1,0 +1,49 @@
+<app-back-button></app-back-button>
+<br>
+<div class="container-fluid">
+    <div class="card shadow">
+        <div class="card-body">
+            <div class="d-flex justify-content-between">
+                <button type="button" class="btn btn-primary create-btn" [routerLink]="['/create-student']">Create</button>
+                <div class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Search.." [(ngModel)]="searchString">
+                </div>
+            </div>
+
+            <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                <table class="table my-0" id="dataTable">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Surname</th>
+                            <th class="mobile-hide" scope="col">Contact#</th>
+                            <th class="mobile-hide" scope="col">Email</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let student of student | filter: searchString">
+                            <td>{{student.id}}</td>
+                            <td>{{student.firstName}}</td>
+                            <td>{{student.lastName}}</td>
+                            <td class="mobile-hide">{{student.contactNo}}</td>
+                            <td class="mobile-hide">{{student.email}}</td>
+                            <td class="btn-col">
+                                <div class="btn-actions">
+                                    <button class="btn btn-primary" type="button"
+                                        (click)="viewStudent(student.id)">View</button>
+                                    <button class="btn btn-primary safe-btn" type="button"
+                                        (click)="editStudent(student.id)">Edit</button>
+                                    <button class="btn btn-primary danger-btn" type="button"
+                                        (click)="deleteStudent(student.id)">Delete</button>
+                                    <!-- <app-delete-button></app-delete-button> -->
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

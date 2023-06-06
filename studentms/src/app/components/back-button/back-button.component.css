@@ -1,0 +1,12 @@
+.btn {
+    background: var(--white);
+    border: 2px solid var(--dark);
+    color: var(--dark);
+    margin-left:5px;
+}
+
+.btn:hover {
+    background: var(--dark);
+    color: var(--light);
+    border: 2px solid var(--dark);
+}

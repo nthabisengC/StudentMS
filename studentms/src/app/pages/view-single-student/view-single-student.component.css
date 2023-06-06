@@ -1,0 +1,21 @@
+.info-label{
+    padding-left: 15px;
+    text-align: end;
+}
+
+.emp-info{
+    text-align: start;
+}
+
+.info{
+    font-weight: normal;
+}
+
+.card-body{
+    text-align: center;
+}
+
+.col-xs-6{
+    width: 50%;
+}
+  

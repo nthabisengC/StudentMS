@@ -1,0 +1,72 @@
+.container{
+    width: 500px;
+}
+
+h1{
+    color:var(--red);
+    margin-bottom:0px;
+}
+
+h4{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+p{
+    margin-top: 1rem;
+}
+
+.card-header{
+    background-color:var(--red);
+}
+
+.card-header h1{
+    color:var(--white);
+}
+
+.card-body{
+    text-align: center;
+}
+
+.info-label{
+    padding-left: 15px;
+    text-align: end;
+}
+
+.student-info{
+    text-align: start;
+}
+
+.info{
+    font-weight: normal;
+}
+
+.col-xs-6{
+    width: 50%;
+}
+
+.btn-actions{
+    margin: 1rem 0rem;
+    display: block;
+    text-align: center;
+}
+
+.cancel-btn {
+    background: var(--light-blue);
+    color: var(--light);
+    border: 2px solid var(--light-blue);
+    margin-left:5px;
+}
+
+.cancel-btn:hover {
+    background: var(--white);
+    border: 2px solid var(--light-blue);
+    color: var(--light-blue);
+}
+
+@media only screen and (max-width: 768px) {
+    p {
+        padding: 1px;
+        margin: 2px;
+    }
+}
