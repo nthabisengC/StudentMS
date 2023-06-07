@@ -1,0 +1,43 @@
+.btn {
+    width: 150px;
+  }
+  
+  .btn:hover {
+    background-color: var(--light);
+  }
+  
+  .masthead {
+    min-height: 30rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+  
+    /* background: var(--light-blue);
+    background: linear-gradient(180deg, var(--white) 0%, var(--light-blue) 100%); */
+  }
+  
+  .masthead h1,
+  .masthead .h1 {
+    font-size: 4rem;
+    margin: 0;
+    padding: 0
+  }
+
+.container{
+  padding-bottom: 9rem;
+}
+
+
+  .card-group{
+    padding-top: 19rem;
+  }
+  
+
+
+.image11 {
+  width: 50px;
+  height: 50px;
+}
+  

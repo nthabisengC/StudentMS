@@ -1,0 +1,41 @@
+<app-back-button></app-back-button>
+
+<div class="container">
+  <h1>View Employee</h1>
+  <br>
+  <div class="card shadow">
+    <div class="card-header py-3">
+      <h4 class="m-0">Employee Information</h4>
+    </div>
+    <div class="card-body row">
+      <div class="col-xs-6 info-label" >
+        <label for="firstName" class="form-label info-identifier">First Name: </label>
+      </div>
+      <div class="col-xs-6 emp-info">
+        <label for="empFirstname" class="form-label info">{{employee.firstname}}</label>
+      </div>
+
+      <div class="col-xs-6 info-label">
+        <label for="lastName" class="form-label info-identifier">Last Name: </label>
+      </div>
+      <div class="col-xs-6 emp-info">
+        <label for="empFirstname" class="form-label info">{{employee.lastname}}</label>
+      </div>
+
+      <div class="col-xs-6 info-label">
+        <label for="contactNum" class="form-label info-identifier">Contact Number: </label>
+      </div>
+      <div class="col-xs-6 emp-info">
+        <label for="contact" class="form-label info">{{employee.contactno}}</label>
+      </div>
+
+      <div class="col-xs-6 info-label">
+        <label for="email" class="form-label info-identifier">Email: </label>
+      </div>
+      <div class="col-xs-6 emp-info">
+        <label for="email" class="form-label info">{{employee.email}}</label>
+      </div>
+    </div>
+  </div>
+</div>
+
