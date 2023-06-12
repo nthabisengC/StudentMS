@@ -5,7 +5,7 @@
   <h1>Create Student</h1>
   <div class="card shadow">
     <div class="card-header py-3">
-      <h4 class="m-0">Student Information</h4>
+      <h4 class="m-0" color="buz" >Student Information</h4>
     </div>
     <div class="card-body">
       <form class="row g-3" [formGroup]="createForm" (ngSubmit)="onSubmit()">
@@ -48,7 +48,7 @@
 
         <div class="btn-actions">
           <button type="submit" class="btn btn-primary">
-            <span class="button-text">Submit</span>
+            <span class="button-text" [routerLink]="['/view-all-student']">Submit</span>
         </button>
           <app-cancel-button></app-cancel-button>
         </div>

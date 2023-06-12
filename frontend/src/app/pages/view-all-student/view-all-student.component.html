@@ -23,7 +23,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let student of student | filter: searchString">
+                        <tr *ngFor="let student of students | filter: searchString">
                             <td>{{student.id}}</td>
                             <td>{{student.firstName}}</td>
                             <td>{{student.lastName}}</td>
@@ -32,7 +32,7 @@
                             <td class="btn-col">
                                 <div class="btn-actions">
                                     <button class="btn btn-primary" type="button"
-                                        (click)="viewStudent(student.id)">View</button>
+                                        (click)="viewStudent(student.id)" >View</button>
                                     <button class="btn btn-primary safe-btn" type="button"
                                         (click)="editStudent(student.id)">Edit</button>
                                     <button class="btn btn-primary danger-btn" type="button"

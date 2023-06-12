@@ -33,22 +33,33 @@ export class ViewAllStudentComponent implements OnInit {
     private router: Router
   ) {}
 
-  student: Student[] = [];
+  students: Student[] = [];
   public searchString! : String
 
   ngOnInit(): void {
-    // this.getStudent();
+    this.getStudent();
   }
 
 
-  // private getStudent(){
-  //   this.studentService.getAllStudent().subscribe((student: any) => {
-  //     console.table(student);
-  //     this.employees = student;
+// getStudents(){
+//     this.studentService.getAllStudent().subscribe((student: any) => {
+//       console.table(student);
+//       this.students = student;
 
 
-  //   });
-  // }
+//     });
+//   }
+
+getStudents(){
+  this.studentService.getAllStudent().subscribe({
+    next: (data: any) => {
+      this.students = data
+    },
+    error: (err:any) =>{
+
+    }
+  });
+}
 
   deleteStudent(id: any){
  

@@ -88,7 +88,7 @@ export class CreateStudentComponent implements OnInit {
     throw new Error('Method not implemented.');
   }
 
-  saveEmp() {
+  saveSt() {
     this.studentService.createStudent(this.student).subscribe(
       (data) => {
         console.log(data);
