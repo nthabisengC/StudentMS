@@ -96,11 +96,12 @@
               </div>
   
               <div class="pt-1 mb-4">
-                <button class="btn btn-info btn-lg btn-block" type="button">Login</button>
+                <button class="btn btn-info btn-lg btn-block" type="button" [routerLink]="['/view-all-student']">Login</button>
+                <!-- <span class="button-text" [routerLink]="['/view-all-student']">Login</span> -->
               </div>
   
               <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
-              <p>Don't have an account? <a href="#!" class="link-info">Register here</a></p>
+              <p>Don't have an account? <a href="#!" class="link-info" [routerLink]="['/register']">Register here</a></p>
   
             </form>
   

@@ -52,8 +52,8 @@ export class CreateStudentComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     if (this.createForm.valid) {
-      this.studentService.createStudent(this.createForm.value).subscribe(
-        data => { 
+      this.studentService.createStudents(this.createForm.value).subscribe(
+        (data: any) => { 
           this.student = data
           console.log(data);
           console.table(this.createForm.value);
@@ -79,25 +79,25 @@ export class CreateStudentComponent implements OnInit {
     }
   }
 
-  submit() {
-    console.log(this.studentService);
-    this.saveStudent();
-    this.navigation.back();
-  }
-  saveStudent() {
-    throw new Error('Method not implemented.');
-  }
+  // submit() {
+  //   console.log(this.studentService);
+  //   this.saveStudent();
+  //   this.navigation.back();
+  // }
+  // saveStudent() {
+  //   throw new Error('Method not implemented.');
+  // }
 
-  saveSt() {
-    this.studentService.createStudent(this.student).subscribe(
-      (data) => {
-        console.log(data);
-        Swal.fire('Thank you...', 'You submitted successfully!', 'success');
-        this.router.navigate(['./view-all-emp']);
-      },
-      (error) => console.log(error)
-    );
-  }
+  // saveStudent() {
+  //   this.studentService.createStudent(this.student).subscribe(
+  //     (data) => {
+  //       console.log(data);
+  //       Swal.fire('Thank you...', 'You submitted successfully!', 'success');
+  //       this.router.navigate(['./view-all-emp']);
+  //     },
+  //     (error) => console.log(error)
+  //   );
+  // }
 }
 
 

@@ -11,6 +11,10 @@ const url = "http://localhost:3000/users";
 })
 export class StudentService {
 
+  createStudent(value: any) {
+    throw new Error('Method not implemented.');
+  }
+
   // TODO: change the url to the correct one used by api
   
   constructor(private http:HttpClient) { }
@@ -27,9 +31,9 @@ export class StudentService {
     return this.http.get(url, {responseType: 'json'})
   }
 
-  // createStudent(student:Student){
-  //   return this.http.post(`${this.url}`, student);
-  // }
+  createStudents(student:Student): Observable<any>{
+    return this.http.post(url, student);
+  }
 
   editStudent(id:number, student:Student){
     return this.http.put(url + id, Student);
