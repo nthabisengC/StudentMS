@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { StudentService } from 'src/app/services/student/student.service';
 import { Student } from 'src/app/interface/student';
 import Swal from 'sweetalert2';
+import { Observable } from 'rxjs';
 
 import {
   FormControl,
@@ -84,9 +85,7 @@ export class CreateStudentComponent implements OnInit {
   //   this.saveStudent();
   //   this.navigation.back();
   // }
-  // saveStudent() {
-  //   throw new Error('Method not implemented.');
-  // }
+ 
 
   // saveStudent() {
   //   this.studentService.createStudent(this.student).subscribe(
