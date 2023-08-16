@@ -19,7 +19,7 @@ import { Component } from '@angular/core';
 
 
 @Component({
-  selector: 'app-employee-form',
+  selector: 'app-student-form',
   templateUrl: './student-form.component.html',
   styleUrls: ['./student-form.component.css']
 })
